@@ -31,21 +31,36 @@
 document.getElementById('btn-donate-noakhali').addEventListener('click', function(event){
   event.preventDefault();
 
-  alert("Congrats! You have donated for humankinds.");
+const inputDonateNoakhali = getInputFieldValueById('input-amount-noakhali');
 
+   // Validation for Alert When input NaN Value
 
-  const inputDonateNoakhali = getInputFieldValueById('input-amount-noakhali');
+  if(isNaN(inputDonateNoakhali)){
+    alert('Failed to donate money');
+    return;
+}
+
   const donateAmountNoakhali = getTextFieldValueById('donate-amount-noakhali');
   const newDonateAmountNoakhali = inputDonateNoakhali + donateAmountNoakhali;
   
   document.getElementById('donate-amount-noakhali').innerText = newDonateAmountNoakhali;
 
   const balanceAmount = getTextFieldValueById('balance');
-  const newBalance = balanceAmount - newDonateAmount;
+  const newBalance = balanceAmount - newDonateAmountNoakhali;
 
    document.getElementById('balance').innerText = newBalance;
    
-   
+   // Validation for Alert If have no Sufficient Amount
+
+   if(inputDonateNoakhali > balanceAmount){
+
+    alert('You have no sufficient amount  for donation');
+    return;
+ } 
+
+  // Validation for Alert When Donated Successfully
+
+   alert("Congrats! You have donated suceessfully for humankinds.");
 
 });
 
@@ -55,18 +70,37 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
 document.getElementById('btn-donate-feni').addEventListener('click', function(event){
     event.preventDefault();
 
-    alert("Congrats! You have donated for humankinds.");
-  
     const inputDonateFeni = getInputFieldValueById('input-amount-feni');
-    const donateAmountFeni = getTextFieldValueById('donate-amount-Feni');
+
+     // Validation for Alert When input NaN Value
+
+    if(isNaN(inputDonateFeni)){
+      alert('Failed to donate money');
+      return;
+  }
+  
+
+    const donateAmountFeni = getTextFieldValueById('donate-amount-feni');
     const newDonateAmountFeni = inputDonateFeni + donateAmountFeni;
     
-    document.getElementById('donate-amount-noakhali').innerText = newDonateAmountFeni;
+    document.getElementById('donate-amount-feni').innerText = newDonateAmountFeni;
   
     const balanceAmount = getTextFieldValueById('balance');
     const newBalance = balanceAmount - newDonateAmountFeni;
   
      document.getElementById('balance').innerText = newBalance;
+
+     // Validation for Alert If have no Sufficient Amount
+
+     if(inputDonateFeni > balanceAmount){
+
+      alert('You have no sufficient amount  for donation');
+      return;
+   } 
+
+    // Validation for Alert When Donated Successfully
+
+     alert("Congrats! You have donated suceessfully for humankinds.");
   
   });
 
@@ -75,9 +109,14 @@ document.getElementById('btn-donate-feni').addEventListener('click', function(ev
   document.getElementById('btn-donate-comilla').addEventListener('click', function(event){
     event.preventDefault();
 
-    alert("Congrats! You have donated for humankinds.");
-  
     const inputDonateComilla = getInputFieldValueById('input-amount-comilla');
+
+     // Validation for Alert When input NaN Value
+    if(isNaN(inputDonateComilla)){
+      alert('Failed to donate money');
+      return;
+  }
+  
     const donateAmountComilla = getTextFieldValueById('donate-amount-comilla');
     const newDonateAmountComilla = inputDonateComilla + donateAmountComilla;
     
@@ -87,6 +126,18 @@ document.getElementById('btn-donate-feni').addEventListener('click', function(ev
     const newBalance = balanceAmount - newDonateAmountComilla;
   
      document.getElementById('balance').innerText = newBalance;
+
+      // Validation for Alert If have no Sufficient Amount
+
+      if(inputDonateComilla > balanceAmount){
+
+        alert('You have no sufficient amount  for donation');
+        return;
+     } 
+  
+      // Validation for Alert When Donated Successfully
+  
+       alert("Congrats! You have donated suceessfully for humankinds.");
   
   
   });
@@ -97,9 +148,16 @@ document.getElementById('btn-donate-feni').addEventListener('click', function(ev
   document.getElementById('btn-donate-lakshmipur').addEventListener('click', function(event){
     event.preventDefault();
 
-    alert("Congrats! You have donated for humankinds.");
   
     const inputDonateLakshmipur = getInputFieldValueById('input-amount-lakshmipur');
+
+   // Validation for Alert When input NaN Value
+
+    if(isNaN(inputDonateLakshmipur)){
+      alert('Failed to donate money');
+      return;
+  }
+  
     const donateAmountLakshmipur = getTextFieldValueById('donate-amount-lakshmipur');
     const newDonateAmountLakshmipur = inputDonateLakshmipur + donateAmountLakshmipur;
     
@@ -109,6 +167,19 @@ document.getElementById('btn-donate-feni').addEventListener('click', function(ev
     const newBalance = balanceAmount - newDonateAmountLakshmipur;
   
      document.getElementById('balance').innerText = newBalance;
+
+     // Validation for Alert If have no Sufficient Amount
+
+     if(inputDonateLakshmipur > balanceAmount){
+
+      alert('You have no sufficient amount  for donation');
+      return;
+   } 
+
+    // Validation for Alert When Donated Successfully
+
+     alert("Congrats! You have donated suceessfully for humankinds.");
+  
   
   });
 
@@ -119,10 +190,18 @@ document.getElementById('btn-donate-feni').addEventListener('click', function(ev
   document.getElementById('btn-donate-sylhet').addEventListener('click', function(event){
     event.preventDefault();
 
-    alert("Congrats! You have donated for humankinds.");
-  
     const inputDonateSylhet = getInputFieldValueById('input-amount-sylhet');
+
+    // Validation for Alert When input Value
+
+    if(isNaN(inputDonateSylhet)){
+      alert('Failed to donate money');
+      return;
+  }
+
     const donateAmountSylhet = getTextFieldValueById('donate-amount-sylhet');
+
+
     const newDonateAmountSylhet = inputDonateSylhet + donateAmountSylhet;
     
     document.getElementById('donate-amount-sylhet').innerText = newDonateAmountSylhet;
@@ -131,6 +210,18 @@ document.getElementById('btn-donate-feni').addEventListener('click', function(ev
     const newBalance = balanceAmount - newDonateAmountSylhet;
   
      document.getElementById('balance').innerText = newBalance;
+
+    // Validation for Alert If have no Sufficient Amount
+
+     if(inputDonateSylhet  > balanceAmount){
+
+      alert('You have no sufficient amount  for donation');
+      return;
+   } 
+
+    // Validation for Alert When Donated Successfully
+
+     alert("Congrats! You have donated suceessfully for humankinds.");
   
   
   });
@@ -139,18 +230,36 @@ document.getElementById('btn-donate-feni').addEventListener('click', function(ev
   document.getElementById('btn-donate-quota').addEventListener('click', function(event){
     event.preventDefault();
 
-    alert("Congrats! You have donated for humankinds.");
-  
     const inputDonateQuota = getInputFieldValueById('input-amount-quota');
-    const donateAmountQuota = getTextFieldValueById('donate-amount-sylhet');
+
+    // Validation for Alert When input NaN Value
+    if(isNaN(inputDonateQuota)){
+      alert('Failed to donate money');
+      return;
+  }
+  
+
+    const donateAmountQuota = getTextFieldValueById('donate-amount-quota');
     const newDonateAmountQuota = inputDonateQuota + donateAmountQuota;
     
-    document.getElementById('donate-amount-sylhet').innerText = newDonateAmountQuota;
+    document.getElementById('donate-amount-quota').innerText = newDonateAmountQuota;
   
     const balanceAmount = getTextFieldValueById('balance');
     const newBalance = balanceAmount - newDonateAmountQuota;
   
      document.getElementById('balance').innerText = newBalance;
+
+      // Validation for Alert If have no Sufficient Amount
+
+      if(inputDonateQuota  > balanceAmount){
+
+        alert('You have no sufficient amount  for donation');
+        return;
+     } 
+  
+      // Validation for Alert When Donated Successfully
+  
+       alert("Congrats! You have donated suceessfully for humankinds.");
   
   
   });
