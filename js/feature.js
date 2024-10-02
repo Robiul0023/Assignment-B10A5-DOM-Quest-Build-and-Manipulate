@@ -82,5 +82,37 @@ document.getElementById('history').addEventListener('click', function(){
 
 
 
-      
+       // Section Sylhet
+
+       document.getElementById('btn-donate-sylhet').addEventListener('click', function(){
+        
+        const inputDonateSylhet = getInputFieldValueById('input-amount-sylhet');
+
+        const div = document.createElement('div');
+        div.innerHTML = `<p class = "p-4 border border-slate-300 text-center mx-10">${inputDonateSylhet} Taka Donated for flood affected people. Sylhet flood: water starts receding but shelters overwhelmed.`;
+    
+     
+        // Should be common function
+        
+         document.getElementById('transaction-container').appendChild(div);
+
+       })
+
+
+
+       // Section Quota protests
+
+       document.getElementById('btn-donate-quota').addEventListener('click', function(){
+
+        const inputDonateQuota = getInputFieldValueById('input-amount-quota');
+
+        const div = document.createElement('div');
+        div.innerHTML = `<p class = "p-4 border border-slate-300 text-center mx-10">${inputDonateQuota} Taka Donated for serious injured  people in Quota protests movement. What is happening at the quota-reform protests in Bangladesh?.`;
+    
+     
+        // Should be common function
+        
+         document.getElementById('transaction-container').appendChild(div);
+
+       })
 

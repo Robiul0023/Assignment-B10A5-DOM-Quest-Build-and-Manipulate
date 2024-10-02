@@ -224,7 +224,7 @@ document.getElementById('btn-donate-feni').addEventListener('click', function(ev
   
   });
 
-  // Quota protests
+  // Section Quota protests
   document.getElementById('btn-donate-quota').addEventListener('click', function(event){
     event.preventDefault();
 
