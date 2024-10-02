@@ -53,22 +53,15 @@ const inputDonateNoakhali = getInputFieldValueById('input-amount-noakhali');
 
     alert('You have no sufficient amount  for donation');
     return;
- } 
 
+  }  
+
+  
   // Validation for Alert When Donated Successfully
 
-   alert("Congrats! You have donated suceessfully for humankinds.");
+   alert('Congrats! You have donated suceessfully for humankinds.');
 
-   // Add to transaction history
-
-   const p = document.createElement('p');
-   p.innerText = `${inputDonateNoakhali} Taka is Donated for Donate Noakhali flood. Noakhali flood : Residents struggle as shelters reach capacity! New Balance: ${newBalance}';
-
-   
-
-      document.getElementById('transaction-container').appendChild(p);
-
-});
+  });
 
 
 // Section Feni

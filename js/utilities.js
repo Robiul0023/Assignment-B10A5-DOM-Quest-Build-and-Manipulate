@@ -23,9 +23,7 @@ function getTextFieldValueById(id){
 
 function showSectionById(id){
     // Hide all the sections
-    document.getElementById('').classList.add('hidden');
-    document.getElementById('').classList.add('hidden');
-    document.getElementById('').classList.add('hidden');
+    document.getElementById(id).classList.add('hidden');
 
     // Show the section with the  provide id as parameted
     document.getElementById(id).classList.remove('hidden');
