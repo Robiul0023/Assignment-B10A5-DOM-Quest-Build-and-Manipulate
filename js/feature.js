@@ -29,6 +29,11 @@ document.getElementById('history').addEventListener('click', function(){
     
      document.getElementById('transaction-container').appendChild(div);
 
+       // Create a Date
+        
+       const time = new Date();
+       document.getElementById("today").innerHTML = time;
+
     })
 
 
@@ -40,11 +45,19 @@ document.getElementById('history').addEventListener('click', function(){
 
         const div = document.createElement('div');
         div.innerHTML = `<p class = "p-4 border border-slate-300 text-center mx-10">${inputDonateFeni} Taka Donated for flood affected people. Feni flood: Death toll rises to 23 in Feni flood!`;
+        
     
      
         // Should be common function
         
          document.getElementById('transaction-container').appendChild(div);
+
+          // Create a Date
+        
+          const time = new Date();
+          document.getElementById("today").innerHTML = time;
+        
+
      })
 
 
@@ -60,6 +73,11 @@ document.getElementById('history').addEventListener('click', function(){
       // Should be common function
       
        document.getElementById('transaction-container').appendChild(div);
+
+         // Create a Date
+        
+         const time = new Date();
+         document.getElementById("today").innerHTML = time;
 
       })
 
@@ -77,6 +95,11 @@ document.getElementById('history').addEventListener('click', function(){
             // Should be common function
             
              document.getElementById('transaction-container').appendChild(div);
+
+               // Create a Date
+        
+          const time = new Date();
+          document.getElementById("today").innerHTML = time;
       
         })
 
@@ -96,6 +119,12 @@ document.getElementById('history').addEventListener('click', function(){
         
          document.getElementById('transaction-container').appendChild(div);
 
+          // Create a Date
+        
+          const time = new Date();
+          document.getElementById("today").innerHTML = time;
+
+
        })
 
 
@@ -113,6 +142,11 @@ document.getElementById('history').addEventListener('click', function(){
         // Should be common function
         
          document.getElementById('transaction-container').appendChild(div);
+
+           // Create a Date
+        
+           const time = new Date();
+           document.getElementById("today").innerHTML = time;
 
        })
 
